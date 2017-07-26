@@ -7,27 +7,15 @@ layout: default
   {{ content }}
 
   </br>
-  <h1 class="page-heading">My Projects</h1>
 
-  <!-- <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul> -->
   {% assign default_paths = site.pages | map: "path" %}
   {% assign page_paths = site.header_pages | default: default_paths %}
   
+  <h1 class="page-heading">iOS Apps (Swift)</h1>
   <ul class="post-list">
   {% for path in page_paths %}
     {% assign my_page = site.pages | where: "path", path | first %}
-    {% if my_page.title and my_page.project != "none" %}
+    {% if my_page.title and my_page.project != "none" and my_page.platform == "iOS" %}
       <li>
         <h2 style="margin-bottom:0px;">
           <a class="post-link" href="{{ my_page.permalink | relative_url }}">{{ my_page.title | escape }}</a>
@@ -40,6 +28,40 @@ layout: default
   {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  <h1 class="page-heading">Android Apps (Corona SDK)</h1>
+  <ul class="post-list">
+  {% for path in page_paths %}
+    {% assign my_page = site.pages | where: "path", path | first %}
+    {% if my_page.title and my_page.project != "none" and my_page.platform == "Android" %}
+      <li>
+        <h2 style="margin-bottom:0px;">
+          <a class="post-link" href="{{ my_page.permalink | relative_url }}">{{ my_page.title | escape }}</a>
+        </h2>
+        <div style="font-size: 90%;">
+          {{my_page.summary}}
+        </div>
+      </li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+
+  <h1 class="page-heading">Go</h1>
+  <ul class="post-list">
+  {% for path in page_paths %}
+    {% assign my_page = site.pages | where: "path", path | first %}
+    {% if my_page.title and my_page.project != "none" and my_page.platform == "Go" %}
+      <li>
+        <h2 style="margin-bottom:0px;">
+          <a class="post-link" href="{{ my_page.permalink | relative_url }}">{{ my_page.title | escape }}</a>
+        </h2>
+        <div style="font-size: 90%;">
+          {{my_page.summary}}
+        </div>
+      </li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
 
 </div>

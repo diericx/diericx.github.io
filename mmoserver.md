@@ -1,15 +1,13 @@
 ---
 layout: page
-title: Emoji Dash
-permalink: /thebutton/
-project: thebutton
-platform: iOS
-summary: A simple button gambling app. Users try to match emojis and the first one to match all 4 wins. The winner gets to send all the players a picture.
+title: MMO Server
+permalink: /mmoserver/
+project: mmoserver
+platform: Go
+summary: An MMO server I have been working on for a few years as a side project.
 ---
 
 {{page.summary}}
-
-
 
 <ul class="post-list">
     {% for post in site.posts %}

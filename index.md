@@ -17,7 +17,7 @@ layout: home
 />
 
 <!-- Prepare a container for your calendar. -->
-<div class="calendar">
+<div class="calendar" onclick="location.href='https://github.com/diericx';" style="cursor:pointer;">
     <!-- Loading stuff -->
     Loading the data just for you.
 </div>
