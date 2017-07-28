@@ -8,18 +8,5 @@ summary: An MMO server I have been working on for a few years as a side project.
 ---
 
 {{page.summary}}
+I began this project with very little knowledge of MMO servers. Some of the very early branches show some of the naive techniques I was using, which is fairly interesting to look at. I then did a bit of research online and created a much more efficient server. 
 
-<ul class="post-list">
-    {% for post in site.posts %}
-        {% if post.project == page.project %}
-            <li>
-                {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-                <span class="post-meta">{{ post.date | date: date_format }}</span>
-
-                <h2>
-                <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-                </h2>
-            </li>
-        {% endif %}
-    {% endfor %}
-</ul>
