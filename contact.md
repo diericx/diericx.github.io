@@ -21,7 +21,7 @@ project: none
         <label for="message">Message:</label>
         <textarea class="form-control" type='text' name='message'></textarea>
     </div>
-    <input type='submit' value='Test form' />
+    <input type='submit' class="btn btn-primary" value='Submit' />
 </form>
 
 
