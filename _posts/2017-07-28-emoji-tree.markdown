@@ -9,7 +9,7 @@ project: thebutton
 
 The main feature of this app are, obviously, the emoji. You can collect and craft emoji by playing the game online with other players. What this meant was that I had to create a huge crafting tree for the emoji, which was long and tedious.  
   
-[Check it out here!](/emojitree.html)  
+[Check it out here!](/emojiTree.html)  
 
 So the tree is basically just made up of a bunch of JSON nodes, each one with a "value" key and "children" key. This worked out pretty well and I ended up importing it straight into swift.
 
