@@ -16,16 +16,6 @@ layout: home
   href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css"
 />
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-103774504-1', 'auto');
-  ga('send', 'pageview');
-</script>
-
 <!-- Prepare a container for your calendar. -->
 <div class="calendar" onclick="location.href='https://github.com/diericx';" style="cursor:pointer;">
     <!-- Loading stuff -->
