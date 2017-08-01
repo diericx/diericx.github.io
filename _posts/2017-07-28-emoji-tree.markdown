@@ -34,10 +34,10 @@ do {
 }
 {% endhighlight %}
 
-I couldn't exactly just use this though; it would be super inefficient. If I wanted to look up a recipe, I would have to search the ENTIRE tree for an emoji just for it's children. That's why I decided to convert the tree to a dictionary.  
+I couldn't exactly just use this though; it would be super inefficient. If I wanted to look up a recipe, I would have to search the ENTIRE tree for an emoji, just so I could throw it's 3 (or less) children into an array. That's why I decided to convert the tree to a dictionary.  
   
 #### Converting the tree to a dictionary (And an array)
-All I needed from this tree was a dictionary (Emoji character -> Emoji recipe array) and an array of all of the emoji sepperated by tier. So I did a breadth first traversal of the tree and saved every emoji's recipe. I also added every emoji to an array and every time the traversal moved to another level, I marked that index as a new tier. Here's the code: 
+All I needed from this tree was a dictionary holding the recipe for every emoji (Emoji character -> Emoji recipe array) and an array of all of the emoji sorted by tier. So I did a breadth first traversal of the tree and saved every emoji's recipe. I also added every emoji to an array and every time the traversal moved to another level, I marked that index as a new tier. Here's the code: 
 
 {% highlight swift %}
 var currentTier = 0
